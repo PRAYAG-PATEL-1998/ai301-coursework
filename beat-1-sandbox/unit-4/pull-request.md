@@ -15,7 +15,7 @@ label is not graded.
 
 **Pull request**
 
-PENDING: the PR is not opened yet. Replace this line with the link to the pull request's own page on codepath/pathreview-ai301-fa26-s1 (`https://github.com/codepath/pathreview-ai301-fa26-s1/pull/<number>`) once it is open.
+https://github.com/codepath/pathreview-ai301-fa26-s1/pull/134
 
 **Branch**
 
