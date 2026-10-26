@@ -1,4 +1,4 @@
-# Contribution: Percussion "pitch" not preserved on MIDI import for generic/unrecognized percussion instruments
+# Contribution: MudTimePicker Menu closes prematurely. Doesn't allow for user to Select PM or AM after selecting time.
 
 Path: `beat-2-contribution/contribution-story.md`
 
@@ -10,7 +10,7 @@ files and no evidence uploads are part of Assignment 5.
 **Contribution Number:** [1]
 **Student:** [Student name]
 **GitHub Username:** PRAYAG-PATEL-1998
-**Issue:** https://github.com/cuthbertLab/music21/issues/1659
+**Issue:** https://github.com/MudBlazor/MudBlazor/issues/13128
 **Pull Request:** [GitHub PR link, once opened]
 
 One repository, built across units 5 to 8, telling the whole story of your real
@@ -89,7 +89,9 @@ you it held up. **Record the link to your claim comment in this section too.**
 Not claimed yet? Write `claim pending` and today's date where the link goes,
 and add the link the moment your claim lands.]
 
-**Claim comment:** https://github.com/cuthbertLab/music21/issues/1659#issuecomment-6407296177 (posted 2026-10-26)
+**Claim comment:** https://github.com/MudBlazor/MudBlazor/issues/13128#issuecomment-6407937699 (posted 2026-10-26)
+
+**Earlier claim, stepped back:** I first claimed `cuthbertLab/music21#1659` (https://github.com/cuthbertLab/music21/issues/1659#issuecomment-6407296177). A maintainer answered that they would decline help from someone without music or MIDI percussion experience, so I stepped back (https://github.com/cuthbertLab/music21/issues/1659#issuecomment-6407356079) and chose this issue instead. The scout could not see that kind of gatekeeping before the claim.
 
 **Toolkit**
 
