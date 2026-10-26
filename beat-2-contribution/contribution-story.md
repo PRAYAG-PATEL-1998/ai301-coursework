@@ -1,4 +1,4 @@
-# Contribution: [Issue Title]
+# Contribution: Percussion "pitch" not preserved on MIDI import for generic/unrecognized percussion instruments
 
 Path: `beat-2-contribution/contribution-story.md`
 
@@ -9,9 +9,8 @@ files and no evidence uploads are part of Assignment 5.
 
 **Contribution Number:** [1]
 **Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
+**GitHub Username:** PRAYAG-PATEL-1998
+**Issue:** https://github.com/cuthbertLab/music21/issues/1659
 **Pull Request:** [GitHub PR link, once opened]
 
 One repository, built across units 5 to 8, telling the whole story of your real
@@ -89,6 +88,8 @@ wild search and what you changed or would change, or what convinced
 you it held up. **Record the link to your claim comment in this section too.**
 Not claimed yet? Write `claim pending` and today's date where the link goes,
 and add the link the moment your claim lands.]
+
+**Claim comment:** https://github.com/cuthbertLab/music21/issues/1659#issuecomment-6407296177 (posted 2026-10-26)
 
 **Toolkit**
 
