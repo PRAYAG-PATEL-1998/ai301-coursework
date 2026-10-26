@@ -55,10 +55,9 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Installed the issue-scout and patched its rubric and search strategy after five scans**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I installed the issue-scout over my unit 1 skill (inside my course repo), wrote a 15-query search strategy and ranking rules from my fit profile, ran five scans, and graded six issues directly. The first scan accepted five issues that were documentation-only, filler, or already claimed, so I added a `code-change` check and a tighter `unclaimed` rule. Later scans kept grading the same rejected issues and missed that `dismech` auto-closes fork PRs, so I added an `outsider-pr` check and a rejected-URL list. It still falls short: the ranking cannot see a PR named only in an issue's text or a repo's AI policy (`beets` bans AI on good first issues), and `maintainer-responsive` wrongly failed `music21` by counting only comments on closed issues, although its outside PRs get a first reply in about 12 minutes. I did not re-run a scan after the last fixes, so they are untested.
 
 **Unit 6: [one line on the tool work]**
 
