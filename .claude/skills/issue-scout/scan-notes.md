@@ -178,3 +178,12 @@ student, dated per scan. -->
 - **Difficulty note:** added a section under the checks table: straightforward, moderate or ambitious. It is information for me and never changes the verdict.
 - **Verdict rule:** now lists `scope-feasible` in place of `scope-fits`.
 - **Why:** in my five scans, `scope-fits` rejected issues with an open edge (for example `kaoto#3789`, which waits for a maintainer decision). The three issues I claimed all have a small open edge (for example, whether to change the default of `AutoClose` in `MudBlazor#13128`), which the note will name.
+
+
+## 2026-10-29 re-grade of my three claimed picks (patched rubric)
+
+- **Result:** `nusmods#3060` accepted (difficulty: moderate). `MudBlazor#13128` and `openedx#897` rejected, both on `unclaimed` = `unclear`.
+- **Scout flaw, my own claim blocks me:** the `unclaimed` check counted MY OWN claim comment (2026-10-26) as an active claim by someone else, so it graded `unclear` and rejected two issues I had legitimately claimed. The rule I added in the first round (a plan or "PR coming" comment from the last 14 days gives `unclear`) does not exclude the grader's own user. Possible fix: ignore comments written by my own GitHub username (`PRAYAG-PATEL-1998`).
+- **Maintainer replies the scout did not weigh:** `MudBlazor#13128` (danielchalmers): the current close behavior is by design and stays in v9, and only a docs PR is welcome now. That makes it a docs fix for now, which I do not want. `openedx#897` (bradenmacdonald): "Please open one PR for all seven and anything else related to the titles." That is a go-ahead.
+- **`maintainer-responsive` is still unreliable:** it samples the 3 newest closed issues by creation order and counts only comments. Still a preferred check, so it changes no verdict.
+- **Decision input:** the maintainers' replies matter more than the scout's verdict here. `openedx#897` has an explicit go-ahead. `MudBlazor#13128` has a clear no for a code fix. `nusmods#3060` has no reply yet.

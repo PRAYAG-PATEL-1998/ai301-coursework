@@ -710,3 +710,80 @@ Per the scope rules, if you take one of these you should comment on the issue to
   }
 ]
 ```
+
+
+---
+
+## Re-grade of the three picks: 2026-10-29 (`issue-scout: grade`, direct mode, after the unit 6 scope patch)
+
+Verdicts: 1 accepted, 2 rejected
+
+All three issues were graded in direct mode, so there is no search query or ranking to report. Two of the three are blocked by claim comments you posted on 2026-10-26. The rubric counts those as active claims.
+
+Accepted, in fit order:
+
+1. nusmodifications/nusmods#3060, GlobalSearch renders unnecessarily. Fit: React/TypeScript, a single bounded performance fix in one component, and a repo pushed to on 2026-10-28. Difficulty: moderate. The issue says the fix may be easier after #3039, but #3039 is closed, so that dependency no longer applies.
+
+Rejected:
+
+- MudBlazor/MudBlazor#13128, MudTimePicker closes prematurely. Sunk by unclaimed (unclear) and code-change (unclear).
+  - Your 2026-10-26 comment states a concrete plan (change SubmitAndCloseAsync behavior and add a bUnit test), which is inside the 14-day window, so the check is unclear and counts as fail.
+  - The maintainer's reply says to keep the default in v9 and that "a PR clarifying the AutoClose docs would be welcome," which points to a docs-only fix. That makes code-change unclear too. The verdict doesn't depend on that check.
+- openedx/frontend-app-authoring#897, move document.title to Helmet. Sunk by unclaimed (unclear).
+  - Your 2026-10-26 comment names seven files and the Helmet + intl pattern, which is a concrete plan. The maintainer replied the same day asking for one PR covering all seven.
+
+Preferred check (maintainer-responsive): all three repos fail it. Each of the three most recently created closed issues has zero owner, member, or collaborator replies. For nusmods, the sampled issues were all bot-opened or had no comments. Sampling used creation order, not close order, because I didn't pull closedAt. This check never changes a verdict.
+
+For you: the nusmods comment is the closest call. "Reproduce with the profiler, then try the smallest change" names a method but no concrete code change, so I graded unclaimed as pass. You said you'd confirm "within about a week," so confirm or step back on that thread. For MudBlazor and openedx, the claims are yours and still active, so either wait for the maintainer's answer or say you're stepping back so the claim lapses.
+
+```json
+[
+  {
+    "item": "https://github.com/nusmodifications/nusmods/issues/3060",
+    "checks": [
+      {"name": "maintainer-alive", "grade": "pass", "evidence": "Latest default-branch commit by jloh02 (human) 2026-10-26T14:52:51Z: 'chore(ci): update Node.js to 22.23.4'"},
+      {"name": "repo-in-use", "grade": "pass", "evidence": "isArchived=false; pushedAt 2026-10-28T22:54:42Z (within 180 days)"},
+      {"name": "scope-feasible", "grade": "pass", "evidence": "One component: GlobalSearch renders unnecessarily when not empty; one bounded behavior"},
+      {"name": "code-change", "grade": "pass", "evidence": "Performance bug: component re-renders without state change; fix changes render behavior in website/src/views/layout/GlobalSearch.tsx"},
+      {"name": "unclaimed", "grade": "pass", "evidence": "assignees: none; no open PR referencing #3060; only claim is PRAYAG-PATEL-1998 2026-10-26 naming a method but no concrete code change (borderline)"},
+      {"name": "outsider-pr", "grade": "pass", "evidence": "CONTRIBUTING.md: 'Fork the repository and create your branch from master'; no .github/workflows directory, so no fork-closing workflow"},
+      {"name": "ai-contribution-policy", "grade": "pass", "evidence": "No AI policy in CONTRIBUTING.md; AGENTS.md is agent guidance, not a ban"},
+      {"name": "maintainer-responsive", "grade": "fail", "evidence": "Three most recently created closed issues (4593, 4589, 4585) have zero comments (preferred; never changes verdict)"}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "https://github.com/MudBlazor/MudBlazor/issues/13128",
+    "checks": [
+      {"name": "maintainer-alive", "grade": "pass", "evidence": "Latest default-branch commit by Jonny Larsson (Garderoben, human) 2026-10-29T20:52:41Z"},
+      {"name": "repo-in-use", "grade": "pass", "evidence": "isArchived=false; pushedAt 2026-10-29; latest release v9.11.0 2026-09-27"},
+      {"name": "scope-feasible", "grade": "pass", "evidence": "One bug: MudTimePicker closes when AutoClose is not set; one piece of work"},
+      {"name": "code-change", "grade": "unclear", "evidence": "Body asks for logic change, but maintainer danielchalmers 2026-10-26: keep default in v9, 'A PR clarifying the AutoClose docs would be welcome!'"},
+      {"name": "unclaimed", "grade": "unclear", "evidence": "PRAYAG-PATEL-1998 2026-10-26T04:02:34Z: concrete plan (close only when AutoClose true, add bUnit test), within 14 days; no open PR found"},
+      {"name": "outsider-pr", "grade": "pass", "evidence": "CONTRIBUTING.md: 'First fork the repository'; no close-fork workflow among 11 workflows"},
+      {"name": "ai-contribution-policy", "grade": "pass", "evidence": "No AI policy in CONTRIBUTING.md; AGENTS.md is agent guidance, not a ban"},
+      {"name": "maintainer-responsive", "grade": "fail", "evidence": "Sampled #14079 and #14044 (zero comments), #14075 (first reply from mudbot and a CONTRIBUTOR, not owner/member/collaborator): 0 of 3 (preferred)"}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "https://github.com/openedx/frontend-app-authoring/issues/897",
+    "checks": [
+      {"name": "maintainer-alive", "grade": "pass", "evidence": "Latest default-branch commit by navinkarkera (human) 2026-10-28T18:18:54Z"},
+      {"name": "repo-in-use", "grade": "pass", "evidence": "isArchived=false; pushedAt 2026-10-28; no GitHub releases (latest-release 404), but push within 180 days"},
+      {"name": "scope-feasible", "grade": "pass", "evidence": "One migration: document.title to Helmet with intl page titles; several files involved, which does not fail the check"},
+      {"name": "code-change", "grade": "pass", "evidence": "Body: 'Also need to add intl for the page name' makes titles translatable, a runtime behavior change"},
+      {"name": "unclaimed", "grade": "unclear", "evidence": "PRAYAG-PATEL-1998 2026-10-26T04:03:56Z: concrete plan (7 files, Helmet + intl pattern); maintainer bradenmacdonald replied 2026-10-26T16:46:12Z; within 14 days"},
+      {"name": "outsider-pr", "grade": "pass", "evidence": "No CONTRIBUTING.md in repo; org CONTRIBUTING.md only links the AI policy; no fork-closing workflow among 9 workflows"},
+      {"name": "ai-contribution-policy", "grade": "pass", "evidence": "Open edX AI_POLICY.md: conditions only (disclose AI use, understand and review code); no outright ban"},
+      {"name": "maintainer-responsive", "grade": "fail", "evidence": "Three most recently created closed issues (#3330, #3265, #3156) have zero comments (preferred)"}
+    ],
+    "verdict": "reject"
+  }
+]
+```
+
+Added by me after the grade (maintainer replies, read on GitHub 2026-10-29):
+- MudBlazor#13128, danielchalmers, 2026-10-26: "I believe without `PickerActions`, closing after the minutes is by design, so we should probably keep that default in v9. Open to ideas on making `AutoClose="false"` keep the picker open in v10. ... A PR clarifying the `AutoClose` docs would be welcome!"
+- openedx#897, bradenmacdonald, 2026-10-26: "Please open one PR for all seven and anything else related to the titles."
+- nusmods#3060: no reply yet.
