@@ -1,0 +1,6 @@
+
+# local Claude Code files (kept out of git)
+.claude/settings.local.json
+guard-log.md
+gate-log.md
+.claude/_backup*/
