@@ -43,6 +43,7 @@ import datetime
 import json
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -161,7 +162,7 @@ def run_voice_pass(guide: str, draft: str) -> dict:
     last_err = None
     for _ in range(2):
         try:
-            proc = subprocess.run(["claude", "-p", "--model", MODEL],
+            proc = subprocess.run([shutil.which("claude") or "claude", "-p", "--model", MODEL],
                                   input=prompt, capture_output=True,
                                   text=True, timeout=80)
         except FileNotFoundError:

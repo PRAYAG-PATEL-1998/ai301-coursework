@@ -54,6 +54,7 @@ import json
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 import time
@@ -961,7 +962,7 @@ def run_precheck(tool: dict, scope: str, voice: str, live: dict,
     for _ in range(2):
         limit = time_left(deadline, MODEL_TIMEOUT_S)
         try:
-            proc = subprocess.run(["claude", "-p", "--model", MODEL],
+            proc = subprocess.run([shutil.which("claude") or "claude", "-p", "--model", MODEL],
                                   input=prompt, capture_output=True,
                                   text=True, encoding="utf-8",
                                   errors="replace", timeout=limit,
