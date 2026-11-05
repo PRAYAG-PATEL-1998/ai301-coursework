@@ -68,7 +68,7 @@ My manifest runs `oxlint`, `npm run types` and the Jest suites for the seven pag
 
 **Unit 8: Read my PR's state with the app's PR monitor and drafted the replies I need while the agreement is pending**
 
-After I opened PR 3345 on 2026-11-04, I read its state with the desktop app's PR status instead of polling `gh pr checks`. It showed the PR open and mergeable, review required, and no CI checks started. I pasted the `openedx-webhooks` bot comment into Claude Code. It explained each step in the bot's checklist and drafted a short message for the agreement contact, and I read the draft before I used it. Gap: I have not written a playbook for review feedback, and no reviewer has replied yet, so I have not tested a drafted reply to a reviewer.
+After I opened PR 3345 on 2026-11-04, I read its state with the desktop app's PR status instead of polling `gh pr checks`. It showed the PR open and mergeable, review required, and no CI checks started. I pasted the `openedx-webhooks` bot comment into Claude Code. It explained each step in the bot's checklist and drafted a short message for the agreement contact, and I read the draft before I used it. I then wrote a playbook (`tools/pr-monitor/playbook.md`): nine fixed rules (the monitor is read-only, I decide every post, the voice guard always runs, I do not tag the maintainer before the agreement and CI are green) and a table of eleven events with the draft and my decision rule for each. I ran it once as a dry run on the bot comment; it told me to send the contact message and post nothing on the PR. Gap: no reviewer has replied yet, so the review rows are untested, and the wait times in the table are starting guesses.
 
 ---
 
